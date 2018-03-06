@@ -19,6 +19,7 @@
 		5931C214204E344B00F59C36 /* UIView+PAOView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C213204E344B00F59C36 /* UIView+PAOView.m */; };
 		5931C217204E34DA00F59C36 /* PAOCustomerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C216204E34DA00F59C36 /* PAOCustomerModel.m */; };
 		5931C21B204E355100F59C36 /* CIImage+PAOImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C21A204E355100F59C36 /* CIImage+PAOImageUtils.m */; };
+		5931C21E204E37B500F59C36 /* UIImage+PAOImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C21D204E37B500F59C36 /* UIImage+PAOImageUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		5931C216204E34DA00F59C36 /* PAOCustomerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOCustomerModel.m; sourceTree = "<group>"; };
 		5931C219204E355100F59C36 /* CIImage+PAOImageUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CIImage+PAOImageUtils.h"; sourceTree = "<group>"; };
 		5931C21A204E355100F59C36 /* CIImage+PAOImageUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CIImage+PAOImageUtils.m"; sourceTree = "<group>"; };
+		5931C21C204E37B500F59C36 /* UIImage+PAOImageUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+PAOImageUtils.h"; sourceTree = "<group>"; };
+		5931C21D204E37B500F59C36 /* UIImage+PAOImageUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PAOImageUtils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +186,8 @@
 			children = (
 				5931C219204E355100F59C36 /* CIImage+PAOImageUtils.h */,
 				5931C21A204E355100F59C36 /* CIImage+PAOImageUtils.m */,
+				5931C21C204E37B500F59C36 /* UIImage+PAOImageUtils.h */,
+				5931C21D204E37B500F59C36 /* UIImage+PAOImageUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				5931C211204E342600F59C36 /* PAOBaiscView.m in Sources */,
 				5931C214204E344B00F59C36 /* UIView+PAOView.m in Sources */,
 				5931C21B204E355100F59C36 /* CIImage+PAOImageUtils.m in Sources */,
+				5931C21E204E37B500F59C36 /* UIImage+PAOImageUtils.m in Sources */,
 				5931C1F4204E2B7D00F59C36 /* main.m in Sources */,
 				5931C20C204E33CE00F59C36 /* PAODemoViewController.m in Sources */,
 				5931C1E6204E2B7D00F59C36 /* AppDelegate.m in Sources */,
