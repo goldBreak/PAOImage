@@ -8,7 +8,7 @@
 
 #import "CIImage+PAOImageUtils.h"
 
-@implementation CIImage (PAOImageUtils)
+@implementation CIImage (PAOHandleImageUtils)
 
 #pragma mark - 模糊模块
 - (CIImage *)gaussianBlurWithRadious:(CGFloat)radious {
@@ -586,12 +586,12 @@
 #pragma mark - 公共模块
 - (UIImage *)dealImage {
     
-    //    UIImage *image = [UIImage imageWithCIImage:self];// scale:0.5 orientation:UIImageOrientationUp
-    //    return image;
+//        UIImage *image = [UIImage imageWithCIImage:self];// scale:0.5 orientation:UIImageOrientationUp
+//        return image;
     
-    CIContext *content = [CIContext contextWithEAGLContext:@{kCIContextWorkingColorSpace:[NSNull null]}];//[CIContext contextWithOptions:nil];
+    CIContext *content = [CIContext contextWithOptions:nil];;
     CGImageRef ref = [content createCGImage:self fromRect:self.extent];
-    
+//
     return  [UIImage imageWithCGImage:ref];
 }
 @end

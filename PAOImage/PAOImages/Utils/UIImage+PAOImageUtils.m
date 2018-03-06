@@ -9,7 +9,7 @@
 #import "UIImage+PAOImageUtils.h"
 #import "CIImage+PAOImageUtils.h"
 
-@implementation UIImage (PAOImageUtils)
+@implementation UIImage (PAOHandleImageUtils)
 
 #pragma mark - 模糊模块
 - (UIImage *)gaussianBlurWithRadious:(CGFloat)radious {

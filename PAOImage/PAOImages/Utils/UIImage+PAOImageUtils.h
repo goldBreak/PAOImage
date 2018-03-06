@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (PAOImageUtils)
+@interface UIImage (PAOHandleImageUtils)
 
 #pragma mark - 模糊模块
 /**

@@ -20,6 +20,7 @@
 		5931C217204E34DA00F59C36 /* PAOCustomerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C216204E34DA00F59C36 /* PAOCustomerModel.m */; };
 		5931C21B204E355100F59C36 /* CIImage+PAOImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C21A204E355100F59C36 /* CIImage+PAOImageUtils.m */; };
 		5931C21E204E37B500F59C36 /* UIImage+PAOImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C21D204E37B500F59C36 /* UIImage+PAOImageUtils.m */; };
+		5931C221204E66CF00F59C36 /* UIImage+PAOImagUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C220204E66CF00F59C36 /* UIImage+PAOImagUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		5931C21A204E355100F59C36 /* CIImage+PAOImageUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CIImage+PAOImageUtils.m"; sourceTree = "<group>"; };
 		5931C21C204E37B500F59C36 /* UIImage+PAOImageUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+PAOImageUtils.h"; sourceTree = "<group>"; };
 		5931C21D204E37B500F59C36 /* UIImage+PAOImageUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PAOImageUtils.m"; sourceTree = "<group>"; };
+		5931C21F204E66CF00F59C36 /* UIImage+PAOImagUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+PAOImagUtils.h"; sourceTree = "<group>"; };
+		5931C220204E66CF00F59C36 /* UIImage+PAOImagUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PAOImagUtils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 				5931C21A204E355100F59C36 /* CIImage+PAOImageUtils.m */,
 				5931C21C204E37B500F59C36 /* UIImage+PAOImageUtils.h */,
 				5931C21D204E37B500F59C36 /* UIImage+PAOImageUtils.m */,
+				5931C21F204E66CF00F59C36 /* UIImage+PAOImagUtils.h */,
+				5931C220204E66CF00F59C36 /* UIImage+PAOImagUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 			files = (
 				5931C217204E34DA00F59C36 /* PAOCustomerModel.m in Sources */,
 				5931C209204E33AB00F59C36 /* PAOBasicViewController.m in Sources */,
+				5931C221204E66CF00F59C36 /* UIImage+PAOImagUtils.m in Sources */,
 				5931C1E9204E2B7D00F59C36 /* ViewController.m in Sources */,
 				5931C211204E342600F59C36 /* PAOBaiscView.m in Sources */,
 				5931C214204E344B00F59C36 /* UIView+PAOView.m in Sources */,
@@ -401,7 +407,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CYTJAT486P;
-				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PAOImage/Config/UI_Config.h";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PAOImage/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = PAOImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PAO.PAOImage;
@@ -416,7 +422,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CYTJAT486P;
-				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PAOImage/Config/UI_Config.h";
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PAOImage/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = PAOImage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PAO.PAOImage;

@@ -7,8 +7,14 @@
 //
 
 #import "PAODemoViewController.h"
+#import "UIImage+PAOImageUtils.h"
 
 @interface PAODemoViewController ()
+
+@property (nonatomic, strong) UIImageView *filterImageView;
+@property (nonatomic, strong) UIImageView *originImageView;
+
+@property (nonatomic, strong) UILabel *messageLable;
 
 @end
 
@@ -17,21 +23,48 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIImage *testImage = [UIImage imageNamed:@"test.jpg"];
+    
+    [self.view addSubview:self.filterImageView];
+    [self.view addSubview:self.originImageView];
+    [self.view addSubview:self.messageLable];
+    self.messageLable.text = @"更改颜色Filter";
+    self.filterImageView.image = [testImage paintingWithColor:[UIColor colorWithRed:0.3 green:0.7 blue:0.7 alpha:1]];
+    self.originImageView.image = testImage;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - lazy
+- (UIImageView *)filterImageView {
+    
+    if (!_filterImageView) {
+        _filterImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.originImageView.maxY , kScreenWidth, self.originImageView.height)];
+        _filterImageView.contentMode = UIViewContentModeScaleAspectFit;
+    }
+    return _filterImageView;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UIImageView *)originImageView {
+    
+    if (!_originImageView) {
+        _originImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100 , kScreenWidth, (kScreenHeight - 100)/2.)];
+        _originImageView.contentMode = UIViewContentModeScaleAspectFit;
+        
+    }
+    return _originImageView;
 }
-*/
+
+- (UILabel *)messageLable {
+    
+    if (!_messageLable) {
+        
+        _messageLable = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100)];
+        _messageLable.textColor = [UIColor blackColor];
+        _messageLable.backgroundColor = [UIColor whiteColor];
+        _messageLable.textAlignment = NSTextAlignmentCenter;
+    }
+    return _messageLable;
+}
 
 @end

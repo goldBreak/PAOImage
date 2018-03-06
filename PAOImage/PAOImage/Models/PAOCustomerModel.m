@@ -10,4 +10,9 @@
 
 @implementation PAOCustomerModel
 
+- (id)copyWithZone:(NSZone *)zone {
+    return [NSKeyedUnarchiver unarchiveObjectWithData:[NSKeyedArchiver archivedDataWithRootObject:self]];
+}
+
+
 @end

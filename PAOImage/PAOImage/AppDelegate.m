@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "PAODemoViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,9 +24,10 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    ViewController *vc = [[ViewController alloc] init];
+//    ViewController *vc = [[ViewController alloc] init];
+    PAODemoViewController *demoVC = [[PAODemoViewController alloc] init];
     
-    self.window.rootViewController = vc;
+    self.window.rootViewController = demoVC;//vc;
     
     [self.window makeKeyAndVisible];
     

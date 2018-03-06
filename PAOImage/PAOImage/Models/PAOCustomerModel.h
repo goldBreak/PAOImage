@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PAOCustomerModel : NSObject
+@interface PAOCustomerModel : NSObject<NSCopying>
 
 @end

@@ -9,7 +9,7 @@
 #import <CoreImage/CoreImage.h>
 #import <UIKit/UIKit.h>
 
-@interface CIImage (PAOImageUtils)
+@interface CIImage (PAOHandleImageUtils)
 
 #pragma mark - 模糊模块
 /**

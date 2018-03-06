@@ -10,16 +10,17 @@
 
 @interface UIView (PAOView)
 
-- (CGFloat)width;
+@property (nonatomic) CGFloat width;
+@property (nonatomic) CGFloat height;
+@property (nonatomic) CGFloat originX;
+@property (nonatomic) CGFloat originY;
+@property (nonatomic) CGPoint origin;
+@property (nonatomic) CGFloat centerX;
+@property (nonatomic) CGFloat centerY;
+@property (nonatomic) CGSize  size;
 
-- (CGFloat)height;
-
-- (CGFloat)originX;
-
-- (CGFloat)originY;
 
 - (CGFloat)maxX;
-
 - (CGFloat)maxY;
 
 @end
