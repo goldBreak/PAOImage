@@ -21,6 +21,10 @@
 		5931C21B204E355100F59C36 /* CIImage+PAOImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C21A204E355100F59C36 /* CIImage+PAOImageUtils.m */; };
 		5931C21E204E37B500F59C36 /* UIImage+PAOImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C21D204E37B500F59C36 /* UIImage+PAOImageUtils.m */; };
 		5931C221204E66CF00F59C36 /* UIImage+PAOImagUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C220204E66CF00F59C36 /* UIImage+PAOImagUtils.m */; };
+		5937784B204F778400A118D4 /* PAOFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5937784A204F778400A118D4 /* PAOFilterModel.m */; };
+		5937784E204F7F3200A118D4 /* NSObject+PAOAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5937784D204F7F3200A118D4 /* NSObject+PAOAdd.m */; };
+		59377855204F8A4400A118D4 /* PAOImageHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 59377854204F8A4400A118D4 /* PAOImageHandle.m */; };
+		59377858204F8BEA00A118D4 /* PAOBlurFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59377857204F8BEA00A118D4 /* PAOBlurFilterModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +57,14 @@
 		5931C21D204E37B500F59C36 /* UIImage+PAOImageUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PAOImageUtils.m"; sourceTree = "<group>"; };
 		5931C21F204E66CF00F59C36 /* UIImage+PAOImagUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+PAOImagUtils.h"; sourceTree = "<group>"; };
 		5931C220204E66CF00F59C36 /* UIImage+PAOImagUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PAOImagUtils.m"; sourceTree = "<group>"; };
+		59377849204F778400A118D4 /* PAOFilterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAOFilterModel.h; sourceTree = "<group>"; };
+		5937784A204F778400A118D4 /* PAOFilterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOFilterModel.m; sourceTree = "<group>"; };
+		5937784C204F7F3200A118D4 /* NSObject+PAOAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+PAOAdd.h"; sourceTree = "<group>"; };
+		5937784D204F7F3200A118D4 /* NSObject+PAOAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PAOAdd.m"; sourceTree = "<group>"; };
+		59377853204F8A4400A118D4 /* PAOImageHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAOImageHandle.h; sourceTree = "<group>"; };
+		59377854204F8A4400A118D4 /* PAOImageHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOImageHandle.m; sourceTree = "<group>"; };
+		59377856204F8BEA00A118D4 /* PAOBlurFilterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAOBlurFilterModel.h; sourceTree = "<group>"; };
+		59377857204F8BEA00A118D4 /* PAOBlurFilterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOBlurFilterModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,8 @@
 		5931C1FA204E2F5A00F59C36 /* PAOImages */ = {
 			isa = PBXGroup;
 			children = (
+				59377852204F8A1500A118D4 /* Handle */,
+				59377848204F776700A118D4 /* Model */,
 				5931C218204E34FD00F59C36 /* Utils */,
 			);
 			path = PAOImages;
@@ -153,6 +167,8 @@
 			children = (
 				5931C215204E34DA00F59C36 /* PAOCustomerModel.h */,
 				5931C216204E34DA00F59C36 /* PAOCustomerModel.m */,
+				5937784C204F7F3200A118D4 /* NSObject+PAOAdd.h */,
+				5937784D204F7F3200A118D4 /* NSObject+PAOAdd.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,6 +211,26 @@
 				5931C220204E66CF00F59C36 /* UIImage+PAOImagUtils.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		59377848204F776700A118D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59377849204F778400A118D4 /* PAOFilterModel.h */,
+				5937784A204F778400A118D4 /* PAOFilterModel.m */,
+				59377856204F8BEA00A118D4 /* PAOBlurFilterModel.h */,
+				59377857204F8BEA00A118D4 /* PAOBlurFilterModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59377852204F8A1500A118D4 /* Handle */ = {
+			isa = PBXGroup;
+			children = (
+				59377853204F8A4400A118D4 /* PAOImageHandle.h */,
+				59377854204F8A4400A118D4 /* PAOImageHandle.m */,
+			);
+			path = Handle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,14 +305,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59377855204F8A4400A118D4 /* PAOImageHandle.m in Sources */,
 				5931C217204E34DA00F59C36 /* PAOCustomerModel.m in Sources */,
 				5931C209204E33AB00F59C36 /* PAOBasicViewController.m in Sources */,
+				5937784B204F778400A118D4 /* PAOFilterModel.m in Sources */,
 				5931C221204E66CF00F59C36 /* UIImage+PAOImagUtils.m in Sources */,
 				5931C1E9204E2B7D00F59C36 /* ViewController.m in Sources */,
 				5931C211204E342600F59C36 /* PAOBaiscView.m in Sources */,
 				5931C214204E344B00F59C36 /* UIView+PAOView.m in Sources */,
 				5931C21B204E355100F59C36 /* CIImage+PAOImageUtils.m in Sources */,
 				5931C21E204E37B500F59C36 /* UIImage+PAOImageUtils.m in Sources */,
+				5937784E204F7F3200A118D4 /* NSObject+PAOAdd.m in Sources */,
+				59377858204F8BEA00A118D4 /* PAOBlurFilterModel.m in Sources */,
 				5931C1F4204E2B7D00F59C36 /* main.m in Sources */,
 				5931C20C204E33CE00F59C36 /* PAODemoViewController.m in Sources */,
 				5931C1E6204E2B7D00F59C36 /* AppDelegate.m in Sources */,
