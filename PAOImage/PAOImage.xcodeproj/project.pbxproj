@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5930948A2050DA01004F2E98 /* PAOCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 593094892050DA01004F2E98 /* PAOCameraViewController.m */; };
+		5930948F2050DE02004F2E98 /* PAODemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5930948E2050DE02004F2E98 /* PAODemoView.m */; };
+		593094932050E97F004F2E98 /* PAOLeftView.m in Sources */ = {isa = PBXBuildFile; fileRef = 593094922050E97F004F2E98 /* PAOLeftView.m */; };
 		5931C1E6204E2B7D00F59C36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C1E5204E2B7D00F59C36 /* AppDelegate.m */; };
 		5931C1E9204E2B7D00F59C36 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5931C1E8204E2B7D00F59C36 /* ViewController.m */; };
 		5931C1EE204E2B7D00F59C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5931C1ED204E2B7D00F59C36 /* Assets.xcassets */; };
@@ -28,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		593094882050DA01004F2E98 /* PAOCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAOCameraViewController.h; sourceTree = "<group>"; };
+		593094892050DA01004F2E98 /* PAOCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOCameraViewController.m; sourceTree = "<group>"; };
+		5930948D2050DE02004F2E98 /* PAODemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAODemoView.h; sourceTree = "<group>"; };
+		5930948E2050DE02004F2E98 /* PAODemoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAODemoView.m; sourceTree = "<group>"; };
+		593094912050E97F004F2E98 /* PAOLeftView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAOLeftView.h; sourceTree = "<group>"; };
+		593094922050E97F004F2E98 /* PAOLeftView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOLeftView.m; sourceTree = "<group>"; };
 		5931C1E1204E2B7D00F59C36 /* PAOImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PAOImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5931C1E4204E2B7D00F59C36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5931C1E5204E2B7D00F59C36 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +87,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5930948B2050DDD7004F2E98 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5930948C2050DDD7004F2E98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5930948D2050DE02004F2E98 /* PAODemoView.h */,
+				5930948E2050DE02004F2E98 /* PAODemoView.m */,
+				593094912050E97F004F2E98 /* PAOLeftView.h */,
+				593094922050E97F004F2E98 /* PAOLeftView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		593094902050DE9A004F2E98 /* Support File */ = {
+			isa = PBXGroup;
+			children = (
+				5931C1ED204E2B7D00F59C36 /* Assets.xcassets */,
+				5931C1EF204E2B7D00F59C36 /* LaunchScreen.storyboard */,
+				5931C1E4204E2B7D00F59C36 /* AppDelegate.h */,
+				5931C1E5204E2B7D00F59C36 /* AppDelegate.m */,
+				5931C1E7204E2B7D00F59C36 /* ViewController.h */,
+				5931C1E8204E2B7D00F59C36 /* ViewController.m */,
+				5931C1F3204E2B7D00F59C36 /* main.m */,
+			);
+			path = "Support File";
+			sourceTree = "<group>";
+		};
 		5931C1D8204E2B7D00F59C36 = {
 			isa = PBXGroup;
 			children = (
@@ -98,20 +139,14 @@
 		5931C1E3204E2B7D00F59C36 /* PAOImage */ = {
 			isa = PBXGroup;
 			children = (
-				5931C1E4204E2B7D00F59C36 /* AppDelegate.h */,
-				5931C1E5204E2B7D00F59C36 /* AppDelegate.m */,
-				5931C1E7204E2B7D00F59C36 /* ViewController.h */,
-				5931C1E8204E2B7D00F59C36 /* ViewController.m */,
+				5931C1F2204E2B7D00F59C36 /* Info.plist */,
 				5931C1FB204E2F5A00F59C36 /* Config */,
 				5931C20D204E33EB00F59C36 /* Utils */,
 				5931C204204E336800F59C36 /* Models */,
 				5931C202204E336700F59C36 /* ViewControllers */,
 				5931C203204E336700F59C36 /* Views */,
 				5931C1FF204E32BA00F59C36 /* Sources */,
-				5931C1ED204E2B7D00F59C36 /* Assets.xcassets */,
-				5931C1EF204E2B7D00F59C36 /* LaunchScreen.storyboard */,
-				5931C1F2204E2B7D00F59C36 /* Info.plist */,
-				5931C1F3204E2B7D00F59C36 /* main.m */,
+				593094902050DE9A004F2E98 /* Support File */,
 			);
 			path = PAOImage;
 			sourceTree = "<group>";
@@ -176,8 +211,12 @@
 		5931C205204E339B00F59C36 /* DemoVCs */ = {
 			isa = PBXGroup;
 			children = (
+				5930948B2050DDD7004F2E98 /* Models */,
+				5930948C2050DDD7004F2E98 /* Views */,
 				5931C20A204E33CE00F59C36 /* PAODemoViewController.h */,
 				5931C20B204E33CE00F59C36 /* PAODemoViewController.m */,
+				593094882050DA01004F2E98 /* PAOCameraViewController.h */,
+				593094892050DA01004F2E98 /* PAOCameraViewController.m */,
 			);
 			path = DemoVCs;
 			sourceTree = "<group>";
@@ -305,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				593094932050E97F004F2E98 /* PAOLeftView.m in Sources */,
 				59377855204F8A4400A118D4 /* PAOImageHandle.m in Sources */,
 				5931C217204E34DA00F59C36 /* PAOCustomerModel.m in Sources */,
 				5931C209204E33AB00F59C36 /* PAOBasicViewController.m in Sources */,
@@ -315,8 +355,10 @@
 				5931C214204E344B00F59C36 /* UIView+PAOView.m in Sources */,
 				5931C21B204E355100F59C36 /* CIImage+PAOImageUtils.m in Sources */,
 				5931C21E204E37B500F59C36 /* UIImage+PAOImageUtils.m in Sources */,
+				5930948F2050DE02004F2E98 /* PAODemoView.m in Sources */,
 				5937784E204F7F3200A118D4 /* NSObject+PAOAdd.m in Sources */,
 				59377858204F8BEA00A118D4 /* PAOBlurFilterModel.m in Sources */,
+				5930948A2050DA01004F2E98 /* PAOCameraViewController.m in Sources */,
 				5931C1F4204E2B7D00F59C36 /* main.m in Sources */,
 				5931C20C204E33CE00F59C36 /* PAODemoViewController.m in Sources */,
 				5931C1E6204E2B7D00F59C36 /* AppDelegate.m in Sources */,
@@ -449,6 +491,7 @@
 				DEVELOPMENT_TEAM = CYTJAT486P;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PAOImage/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = PAOImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PAO.PAOImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -464,6 +507,7 @@
 				DEVELOPMENT_TEAM = CYTJAT486P;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PAOImage/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = PAOImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PAO.PAOImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";

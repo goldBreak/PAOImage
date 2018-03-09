@@ -17,12 +17,18 @@ typedef NS_ENUM(NSUInteger, PAOFilterType) {
 };
 
 typedef NS_ENUM(NSUInteger, PAOBlurType) {
-    PAOBlurType_box = PAOFilterType_imageCompound + 1,
-    PAOBlurType_gauess,
-    PAOBlurType_disc,
+    PAOBlurType_box = PAOFilterType_imageCompound + 1,  /*均值模糊*/
+    PAOBlurType_gauess,             /*高斯模糊*/
+    PAOBlurType_disc,               /*圈内模糊*/
+    PAOBlurType_maskImage,          /*浮层图片模糊*/
+    PAOBlurType_median,             /*median模糊*/
+    PAOBlurType_motion,             /*动态模糊*/
+    PAOBlurType_noiseReduction,     /*噪音模糊*/
+    PAOBlurType_zoom,               /*快速移动带来的模糊*/
     
     PAOBlurType_last,
 };
+
 
 typedef NS_ENUM(NSUInteger, PAOColorType) {
     PAOColorType_clamp = PAOBlurType_last + 1,

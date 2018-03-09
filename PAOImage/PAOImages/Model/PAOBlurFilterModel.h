@@ -10,7 +10,18 @@
 
 @interface PAOBlurFilterModel : PAOFilterModel
 
-@property (nonatomic, assign) CGFloat radious;
+//动态模糊需要模糊角度
+@property (nonatomic, assign) CGFloat angle;
 
+//模糊程度
+@property (nonatomic, assign) CGFloat blurLevel;
+
+//模糊用的浮层图片
+@property (nonatomic, strong) UIImage *maskImage;
+
+
+
+//扩展字段，目前没有用到这个字段
+@property (nonatomic) id externData;
 
 @end

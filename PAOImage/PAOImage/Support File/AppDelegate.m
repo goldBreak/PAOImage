@@ -13,7 +13,6 @@
 @interface AppDelegate ()
 
 
-
 @end
 
 @implementation AppDelegate
@@ -24,10 +23,11 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-//    ViewController *vc = [[ViewController alloc] init];
     PAODemoViewController *demoVC = [[PAODemoViewController alloc] init];
     
-    self.window.rootViewController = demoVC;//vc;
+    UINavigationController *naviVC = [[UINavigationController alloc] initWithRootViewController:demoVC];
+    
+    self.window.rootViewController = naviVC;//vc;
     
     [self.window makeKeyAndVisible];
     
