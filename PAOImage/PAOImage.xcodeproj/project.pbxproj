@@ -28,6 +28,7 @@
 		5937784E204F7F3200A118D4 /* NSObject+PAOAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5937784D204F7F3200A118D4 /* NSObject+PAOAdd.m */; };
 		59377855204F8A4400A118D4 /* PAOImageHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 59377854204F8A4400A118D4 /* PAOImageHandle.m */; };
 		59377858204F8BEA00A118D4 /* PAOBlurFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59377857204F8BEA00A118D4 /* PAOBlurFilterModel.m */; };
+		978B9E202055157C003BFFF2 /* PAOItemsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 978B9E1F2055157C003BFFF2 /* PAOItemsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,8 @@
 		59377854204F8A4400A118D4 /* PAOImageHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOImageHandle.m; sourceTree = "<group>"; };
 		59377856204F8BEA00A118D4 /* PAOBlurFilterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAOBlurFilterModel.h; sourceTree = "<group>"; };
 		59377857204F8BEA00A118D4 /* PAOBlurFilterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOBlurFilterModel.m; sourceTree = "<group>"; };
+		978B9E1E2055157C003BFFF2 /* PAOItemsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAOItemsModel.h; sourceTree = "<group>"; };
+		978B9E1F2055157C003BFFF2 /* PAOItemsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOItemsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5930948B2050DDD7004F2E98 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		5930948C2050DDD7004F2E98 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,7 +207,7 @@
 		5931C205204E339B00F59C36 /* DemoVCs */ = {
 			isa = PBXGroup;
 			children = (
-				5930948B2050DDD7004F2E98 /* Models */,
+				978B9E1D20551501003BFFF2 /* Models */,
 				5930948C2050DDD7004F2E98 /* Views */,
 				5931C20A204E33CE00F59C36 /* PAODemoViewController.h */,
 				5931C20B204E33CE00F59C36 /* PAODemoViewController.m */,
@@ -270,6 +266,15 @@
 				59377854204F8A4400A118D4 /* PAOImageHandle.m */,
 			);
 			path = Handle;
+			sourceTree = "<group>";
+		};
+		978B9E1D20551501003BFFF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				978B9E1E2055157C003BFFF2 /* PAOItemsModel.h */,
+				978B9E1F2055157C003BFFF2 /* PAOItemsModel.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +364,7 @@
 				5937784E204F7F3200A118D4 /* NSObject+PAOAdd.m in Sources */,
 				59377858204F8BEA00A118D4 /* PAOBlurFilterModel.m in Sources */,
 				5930948A2050DA01004F2E98 /* PAOCameraViewController.m in Sources */,
+				978B9E202055157C003BFFF2 /* PAOItemsModel.m in Sources */,
 				5931C1F4204E2B7D00F59C36 /* main.m in Sources */,
 				5931C20C204E33CE00F59C36 /* PAODemoViewController.m in Sources */,
 				5931C1E6204E2B7D00F59C36 /* AppDelegate.m in Sources */,
@@ -488,12 +494,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CYTJAT486P;
+				DEVELOPMENT_TEAM = 8B3G8AF7LX;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PAOImage/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = PAOImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PAO.PAOImage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PAO.PAOImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -504,12 +510,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CYTJAT486P;
+				DEVELOPMENT_TEAM = 8B3G8AF7LX;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PAOImage/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = PAOImage/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = PAO.PAOImage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PAO.PAOImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
