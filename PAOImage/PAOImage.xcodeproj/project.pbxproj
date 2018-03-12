@@ -28,10 +28,12 @@
 		5937784E204F7F3200A118D4 /* NSObject+PAOAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5937784D204F7F3200A118D4 /* NSObject+PAOAdd.m */; };
 		59377855204F8A4400A118D4 /* PAOImageHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 59377854204F8A4400A118D4 /* PAOImageHandle.m */; };
 		59377858204F8BEA00A118D4 /* PAOBlurFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59377857204F8BEA00A118D4 /* PAOBlurFilterModel.m */; };
+		686F1B85B9717ADEA20EBB76 /* libPods-PAOImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C2B344DC9E56F5CC37DA51 /* libPods-PAOImage.a */; };
 		978B9E202055157C003BFFF2 /* PAOItemsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 978B9E1F2055157C003BFFF2 /* PAOItemsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		591CC977205618C300B934D2 /* PAODemoLeftViewProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAODemoLeftViewProtocol.h; sourceTree = "<group>"; };
 		593094882050DA01004F2E98 /* PAOCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAOCameraViewController.h; sourceTree = "<group>"; };
 		593094892050DA01004F2E98 /* PAOCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOCameraViewController.m; sourceTree = "<group>"; };
 		5930948D2050DE02004F2E98 /* PAODemoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAODemoView.h; sourceTree = "<group>"; };
@@ -75,8 +77,11 @@
 		59377854204F8A4400A118D4 /* PAOImageHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOImageHandle.m; sourceTree = "<group>"; };
 		59377856204F8BEA00A118D4 /* PAOBlurFilterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAOBlurFilterModel.h; sourceTree = "<group>"; };
 		59377857204F8BEA00A118D4 /* PAOBlurFilterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOBlurFilterModel.m; sourceTree = "<group>"; };
+		74C2B344DC9E56F5CC37DA51 /* libPods-PAOImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PAOImage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9048A8092FC03304882ADAD6 /* Pods-PAOImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAOImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-PAOImage/Pods-PAOImage.release.xcconfig"; sourceTree = "<group>"; };
 		978B9E1E2055157C003BFFF2 /* PAOItemsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAOItemsModel.h; sourceTree = "<group>"; };
 		978B9E1F2055157C003BFFF2 /* PAOItemsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOItemsModel.m; sourceTree = "<group>"; };
+		C2E27AFEAA7CB8A522048D5F /* Pods-PAOImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAOImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PAOImage/Pods-PAOImage.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +89,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				686F1B85B9717ADEA20EBB76 /* libPods-PAOImage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24CFC4CD1E246CEE2E8BC5E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74C2B344DC9E56F5CC37DA51 /* libPods-PAOImage.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5930948C2050DDD7004F2E98 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +111,7 @@
 				5930948E2050DE02004F2E98 /* PAODemoView.m */,
 				593094912050E97F004F2E98 /* PAOLeftView.h */,
 				593094922050E97F004F2E98 /* PAOLeftView.m */,
+				591CC977205618C300B934D2 /* PAODemoLeftViewProtocol.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,6 +136,8 @@
 				5931C1FA204E2F5A00F59C36 /* PAOImages */,
 				5931C1E3204E2B7D00F59C36 /* PAOImage */,
 				5931C1E2204E2B7D00F59C36 /* Products */,
+				952846925E54DFC68F975A45 /* Pods */,
+				24CFC4CD1E246CEE2E8BC5E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,6 +285,15 @@
 			path = Handle;
 			sourceTree = "<group>";
 		};
+		952846925E54DFC68F975A45 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2E27AFEAA7CB8A522048D5F /* Pods-PAOImage.debug.xcconfig */,
+				9048A8092FC03304882ADAD6 /* Pods-PAOImage.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		978B9E1D20551501003BFFF2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,9 +310,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5931C1F7204E2B7D00F59C36 /* Build configuration list for PBXNativeTarget "PAOImage" */;
 			buildPhases = (
+				C9DBE7F1446EA7B0AFE33710 /* [CP] Check Pods Manifest.lock */,
 				5931C1DD204E2B7D00F59C36 /* Sources */,
 				5931C1DE204E2B7D00F59C36 /* Frameworks */,
 				5931C1DF204E2B7D00F59C36 /* Resources */,
+				63266F97EECA6CF23B644987 /* [CP] Embed Pods Frameworks */,
+				48CC6DB06F00A98C0A458DFA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -343,6 +372,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48CC6DB06F00A98C0A458DFA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PAOImage/Pods-PAOImage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63266F97EECA6CF23B644987 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PAOImage/Pods-PAOImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9DBE7F1446EA7B0AFE33710 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PAOImage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5931C1DD204E2B7D00F59C36 /* Sources */ = {
@@ -491,15 +571,16 @@
 		};
 		5931C1F8204E2B7D00F59C36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2E27AFEAA7CB8A522048D5F /* Pods-PAOImage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8B3G8AF7LX;
+				DEVELOPMENT_TEAM = CYTJAT486P;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PAOImage/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = PAOImage/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.PAO.PAOImage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PAOImage.PAOImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -507,15 +588,16 @@
 		};
 		5931C1F9204E2B7D00F59C36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9048A8092FC03304882ADAD6 /* Pods-PAOImage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8B3G8AF7LX;
+				DEVELOPMENT_TEAM = CYTJAT486P;
 				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/PAOImage/Config/PrefixHeader.pch";
 				INFOPLIST_FILE = PAOImage/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.PAO.PAOImage;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PAOImage.PAOImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

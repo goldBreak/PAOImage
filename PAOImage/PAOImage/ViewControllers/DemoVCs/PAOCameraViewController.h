@@ -7,7 +7,14 @@
 //
 
 #import "PAOBasicViewController.h"
+@protocol PAOCameraVCDelegate
+
+- (void)cameraGetImage:(UIImage *)image;
+
+@end
 
 @interface PAOCameraViewController : PAOBasicViewController
+
+@property (nonatomic, weak) id<PAOCameraVCDelegate> delegate;
 
 @end

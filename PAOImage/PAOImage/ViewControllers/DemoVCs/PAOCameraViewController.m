@@ -8,6 +8,7 @@
 
 #import "PAOCameraViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface PAOCameraViewController ()
 <
@@ -25,9 +26,8 @@ AVCaptureVideoDataOutputSampleBufferDelegate
 @property (nonatomic, strong) AVCaptureDeviceInput *frontInputDevice;
 
 @property (nonatomic, strong) CALayer *customerPreLayer;
-
-@property (nonatomic, strong) AVCaptureVideoDataOutput *captureOutput ;
-
+//@property (nonatomic, strong) AVCaptureVideoDataOutput *captureOutput ;
+@property (nonatomic, strong) AVCaptureStillImageOutput *captureOutput;
 @property (nonatomic, assign) BOOL isReady;
 @property (nonatomic, assign) BOOL selected;
 @property (nonatomic, assign) BOOL isBackCamrea;
@@ -71,23 +71,19 @@ AVCaptureVideoDataOutputSampleBufferDelegate
     }
     
     _captureSession         = [[AVCaptureSession alloc] init];
-    [_captureSession setSessionPreset:AVCaptureSessionPresetPhoto];
+    [_captureSession setSessionPreset:AVCaptureSessionPresetHigh];
     
-    dispatch_queue_t dispatchQueue = dispatch_queue_create("myQueue", NULL);
-    
-    _captureOutput = [[AVCaptureVideoDataOutput alloc] init];
-    _captureOutput.alwaysDiscardsLateVideoFrames = YES;
-    
-    [_captureOutput setSampleBufferDelegate:self queue:dispatchQueue];
+    _captureOutput = [[AVCaptureStillImageOutput alloc] init];
+    NSDictionary *outputSettings = [NSDictionary dictionaryWithObjectsAndKeys:AVVideoCodecJPEG,AVVideoCodecKey, nil];
+    [_captureOutput setOutputSettings:outputSettings];
     
     [_captureSession addInput:_backInputDevice];
     [_captureSession addOutput:_captureOutput];
-    
-    _customerPreLayer = [CALayer layer];
-    
-    _customerPreLayer.frame = CGRectMake(0, 0, kScreenWidth,kScreenHeight);
-    
-    [self.view.layer insertSublayer:_customerPreLayer atIndex:0];
+
+    _videoPreviewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.captureSession];
+    [self.videoPreviewLayer setVideoGravity:AVLayerVideoGravityResizeAspect];
+    self.videoPreviewLayer.frame = CGRectMake(0, 0, kScreenWidth,kScreenHeight);
+    [self.view.layer insertSublayer:self.videoPreviewLayer atIndex:0];
 }
 
 #pragma mark - local
@@ -113,16 +109,14 @@ AVCaptureVideoDataOutputSampleBufferDelegate
     if (self.captureSession) {
         [self.captureSession startRunning];
     }
-    
 }
 
 - (void)initToolBar {
-    
     UIImage *flashImage = [UIImage imageNamed:@"flashlight"];
     UIImage *backImage = [UIImage imageNamed:@"whiteback"];
     
     CGRect frame    = self.navigationController.navigationBar.frame;
-    frame.origin.y  = 20;
+    frame.origin.y  = MAX([[UIApplication sharedApplication] statusBarFrame].size.height - 8, 20.);
     UILabel *titleLalbe = [[UILabel alloc] initWithFrame:frame];
     
     
@@ -154,7 +148,13 @@ AVCaptureVideoDataOutputSampleBufferDelegate
     [switchBtn addTarget:self action:@selector(switchCameraBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:switchBtn];
     
-    
+    UIImage *takePhoto = [UIImage imageNamed:@"cameraIcon"];
+    UIButton *takePhotoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    takePhotoBtn.frame = CGRectMake(0, 0, takePhoto.size.width, takePhoto.size.height);
+    [takePhotoBtn setImage:takePhoto forState:UIControlStateNormal];
+    [takePhotoBtn addTarget:self action:@selector(takePhotoBtnPressDown:) forControlEvents:UIControlEventTouchUpInside];
+    takePhotoBtn.center = CGPointMake(kScreenWidth / 2.0, kScreenHeight - takePhotoBtn.bounds.size.height - 30.);
+    [self.view addSubview:takePhotoBtn];
 }
 
 // 前后摄像头切换
@@ -217,14 +217,66 @@ AVCaptureVideoDataOutputSampleBufferDelegate
     
 }
 
-- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-    
-}
 
 - (void)back {
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)takePhotoBtnPressDown:(UIButton *)button {
+    
+    //输出图像的时候需要用到AVCaptureConnection这个类，session通过AVCaptureConnection连接AVCaptureStillImageOutput进行图片输出，
+    
+    AVCaptureConnection *stillImageConnection = [self.captureOutput connectionWithMediaType:AVMediaTypeVideo];
 
+    UIDeviceOrientation curDeviceOrientation = [[UIDevice currentDevice] orientation];
+
+    AVCaptureVideoOrientation avcaptureOrientation = [self avOrientationForDeviceOrientation:curDeviceOrientation];
+
+    [stillImageConnection setVideoOrientation:avcaptureOrientation];
+
+    //这个方法是控制焦距用的暂时先固定为1，后边写手势缩放焦距的时候会修改这里
+    AVCaptureConnection *myVideoConnection = nil;
+    
+    //从 AVCaptureStillImageOutput 中取得正确类型的 AVCaptureConnection
+    for (AVCaptureConnection *connection in self.captureOutput.connections) {
+        for (AVCaptureInputPort *port in [connection inputPorts]) {
+            if ([[port mediaType] isEqual:AVMediaTypeVideo]) {
+                
+                myVideoConnection = connection;
+                break;
+            }
+        }
+    }
+    [self.captureOutput captureStillImageAsynchronouslyFromConnection:myVideoConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+        NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
+        if (self.delegate && imageData ) {
+            [self.delegate cameraGetImage:[UIImage imageWithData:imageData]];
+            [self.navigationController popViewControllerAnimated:NO];
+        }
+
+    }];
+    
+}
+
+
+
+//设置方向,       照片写入相册之前需要进行旋转
+
+-(AVCaptureVideoOrientation )avOrientationForDeviceOrientation:(UIDeviceOrientation)deviceOrientation
+
+{
+    
+    AVCaptureVideoOrientation result = (AVCaptureVideoOrientation)deviceOrientation;
+    
+    if ( deviceOrientation ==UIDeviceOrientationLandscapeLeft ) {
+        
+        result = AVCaptureVideoOrientationLandscapeRight;
+    } else if ( deviceOrientation == UIDeviceOrientationLandscapeRight ) {
+    
+        result = AVCaptureVideoOrientationLandscapeLeft;
+    }
+    
+    return result;
+}
 
 @end

@@ -28,7 +28,7 @@
     UINavigationController *naviVC = [[UINavigationController alloc] initWithRootViewController:demoVC];
     
     self.window.rootViewController = naviVC;//vc;
-    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     [self.window makeKeyAndVisible];
     
     return YES;

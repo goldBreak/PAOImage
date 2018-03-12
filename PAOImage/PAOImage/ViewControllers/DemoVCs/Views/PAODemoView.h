@@ -8,6 +8,13 @@
 
 #import "PAOBaiscView.h"
 
+
 @interface PAODemoView : PAOBaiscView
+
+@property (nonatomic, weak) id delegate;
+
+- (void)missLeftItemView;
+
+- (void)insertImageView:(UIImageView *)imageView;
 
 @end

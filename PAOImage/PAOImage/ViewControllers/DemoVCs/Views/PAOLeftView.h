@@ -7,7 +7,11 @@
 //
 
 #import "PAOBaiscView.h"
+#import "PAODemoLeftViewProtocol.h"
 
 @interface PAOLeftView : PAOBaiscView
+
+@property (nonatomic, weak) id<PAODemoLeftViewProtocol> delegate;
+
 
 @end
