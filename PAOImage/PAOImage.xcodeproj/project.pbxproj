@@ -28,6 +28,8 @@
 		5937784E204F7F3200A118D4 /* NSObject+PAOAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 5937784D204F7F3200A118D4 /* NSObject+PAOAdd.m */; };
 		59377855204F8A4400A118D4 /* PAOImageHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 59377854204F8A4400A118D4 /* PAOImageHandle.m */; };
 		59377858204F8BEA00A118D4 /* PAOBlurFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 59377857204F8BEA00A118D4 /* PAOBlurFilterModel.m */; };
+		593789F320637621004E303F /* PAOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 593789F220637621004E303F /* PAOImageView.m */; };
+		593789F520637636004E303F /* mew_baseline.png in Resources */ = {isa = PBXBuildFile; fileRef = 593789F420637636004E303F /* mew_baseline.png */; };
 		686F1B85B9717ADEA20EBB76 /* libPods-PAOImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C2B344DC9E56F5CC37DA51 /* libPods-PAOImage.a */; };
 		978B9E202055157C003BFFF2 /* PAOItemsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 978B9E1F2055157C003BFFF2 /* PAOItemsModel.m */; };
 /* End PBXBuildFile section */
@@ -77,6 +79,9 @@
 		59377854204F8A4400A118D4 /* PAOImageHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOImageHandle.m; sourceTree = "<group>"; };
 		59377856204F8BEA00A118D4 /* PAOBlurFilterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAOBlurFilterModel.h; sourceTree = "<group>"; };
 		59377857204F8BEA00A118D4 /* PAOBlurFilterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PAOBlurFilterModel.m; sourceTree = "<group>"; };
+		593789F120637621004E303F /* PAOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAOImageView.h; sourceTree = "<group>"; };
+		593789F220637621004E303F /* PAOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAOImageView.m; sourceTree = "<group>"; };
+		593789F420637636004E303F /* mew_baseline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mew_baseline.png; sourceTree = "<group>"; };
 		74C2B344DC9E56F5CC37DA51 /* libPods-PAOImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PAOImage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9048A8092FC03304882ADAD6 /* Pods-PAOImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PAOImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-PAOImage/Pods-PAOImage.release.xcconfig"; sourceTree = "<group>"; };
 		978B9E1E2055157C003BFFF2 /* PAOItemsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PAOItemsModel.h; sourceTree = "<group>"; };
@@ -188,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				5931C200204E32E200F59C36 /* test.jpg */,
+				593789F420637636004E303F /* mew_baseline.png */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -206,6 +212,8 @@
 			children = (
 				5931C20F204E342600F59C36 /* PAOBaiscView.h */,
 				5931C210204E342600F59C36 /* PAOBaiscView.m */,
+				593789F120637621004E303F /* PAOImageView.h */,
+				593789F220637621004E303F /* PAOImageView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -367,6 +375,7 @@
 			files = (
 				5931C1F1204E2B7D00F59C36 /* LaunchScreen.storyboard in Resources */,
 				5931C201204E32E200F59C36 /* test.jpg in Resources */,
+				593789F520637636004E303F /* mew_baseline.png in Resources */,
 				5931C1EE204E2B7D00F59C36 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +445,7 @@
 				5937784B204F778400A118D4 /* PAOFilterModel.m in Sources */,
 				5931C221204E66CF00F59C36 /* UIImage+PAOImagUtils.m in Sources */,
 				5931C1E9204E2B7D00F59C36 /* ViewController.m in Sources */,
+				593789F320637621004E303F /* PAOImageView.m in Sources */,
 				5931C211204E342600F59C36 /* PAOBaiscView.m in Sources */,
 				5931C214204E344B00F59C36 /* UIView+PAOView.m in Sources */,
 				5931C21B204E355100F59C36 /* CIImage+PAOImageUtils.m in Sources */,
